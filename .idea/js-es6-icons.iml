@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../js-es6-icons">
+      <excludeFolder url="file://$MODULE_DIR$/../js-es6-icons/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/../js-es6-icons/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/../js-es6-icons/tmp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jquery-3.6" level="application" />
+  </component>
+</module>

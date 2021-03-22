@@ -1,0 +1,30 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+nav {
+	background-color: cornflowerblue;
+}
+main {
+	background-color: #8d8d8d;
+}
+.template {
+	display: none;
+}
+.card {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+}
+.card li {
+	font-size: 22px;
+	text-align: center;
+	width: 200px;
+	height: 100px;
+	display: inline-block;
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 2px 2px 3px #000;
+}
