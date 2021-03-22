@@ -97,27 +97,93 @@ $(document).ready(() => {
 			family: 'fas'
 		}
 	];
-	//Milestone 1
+
+	//scansiono array oggetti e li sparo nell'ul colorandoli creati dal template
+	//nascosto in html
 	icons.forEach((elemento) => {
-		let template = $('.template li').clone();
-		let tag = `<i class="${elemento.family} ${elemento.prefix}${elemento.name}"></i>`;
-		//Milestone 2
-		color = "";
-		switch (elemento.type) {
+
+			let template = $('.template li').clone();
+			let tag = `<i class="${elemento.family} ${elemento.prefix}${elemento.name}"></i>`;
+			//Milestone 2
+			color = "";
+			switch (elemento.type) {
+				case "animal":
+					color = "blue";
+					break;
+				case "vegetable":
+					color ="#FFA500"
+					break;
+				case "user"	:
+					color = "#800080"
+					break;
+			}
+			template.children('span#icon').html(tag).css("color", color);
+			template.children('span#desc').text(`${elemento.name}`);
+			$('#animals').append(template);
+		});
+	let type; //variabile che mi dirà quale valore del menu a tendina è stato scelto
+	$('#menu').change(function () { //al cambiamento di menu:
+		$('#animals').children().remove(); //svuoto campo ul
+		switch ($(this).val()) { //assegno a type il valore della option
+			case "all":
+				type = "all"
+				break;
 			case "animal":
-				color = "blue";
+				type = "animal"
 				break;
 			case "vegetable":
-				color ="#FFA500"
+				type = "vegetable"
 				break;
-			case "user"	:
-				color = "#800080"
+			case "user":
+				type = "user"
 				break;
-
 		}
-		template.children('span#icon').append(tag).css("color", color);
-		template.children('span#desc').text(`${elemento.name}`);
-		$('#animals').append(template);
+		icons.forEach((elemento) => {//come il codice fuori dall'evento change ma
+			//filtrato in base al tipo
+			if (type === "all"){
+				let template = $('.template li').clone();
+				let tag = `<i class="${elemento.family} ${elemento.prefix}${elemento.name}"></i>`;
+				//Milestone 2
+				color = "";
+				switch (elemento.type) {
+					case "animal":
+						color = "blue";
+						break;
+					case "vegetable":
+						color ="#FFA500"
+						break;
+					case "user"	:
+						color = "#800080"
+						break;
+
+				}
+				template.children('span#icon').html(tag).css("color", color);
+				template.children('span#desc').text(`${elemento.name}`);
+				$('#animals').append(template);
+			} else if (elemento.type === type){
+				let template = $('.template li').clone();
+				let tag = `<i class="${elemento.family} ${elemento.prefix}${elemento.name}"></i>`;
+				//Milestone 2
+				color = "";
+				switch (elemento.type) {
+					case "animal":
+						color = "blue";
+						break;
+					case "vegetable":
+						color ="#FFA500"
+						break;
+					case "user"	:
+						color = "#800080"
+						break;
+
+				}
+				template.children('span#icon').html(tag).css("color", color);
+				template.children('span#desc').text(`${elemento.name}`);
+				$('#animals').append(template);
+			}
+
+		});
 	});
+
 });
 
