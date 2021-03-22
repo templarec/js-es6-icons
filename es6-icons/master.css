@@ -3,34 +3,55 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+body {
+	font-family: Arial, sans-serif;
+}
 nav {
 	text-align: center;
 	background-color: cornflowerblue;
 }
+label {
+	color: #fff;
+}
 main {
 	background-color: #DDDDDD;
+
 }
 .template {
 	display: none;
 }
 .card {
+	display: inline-block;
+	justify-content: center;
+	flex-direction: row;
+	}
+#animals {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	align-items: center;
 	flex-wrap: wrap;
-
 
 }
 .card li {
-	font-size: 22px;
 	text-align: center;
 	width: 200px;
 	height: 100px;
 	display: inline-block;
+	justify-content: center;
+	align-items: center;
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 1px 1px 1px #818181;
 	margin: 15px 15px;
-	padding-top: 30px;
+	padding-top: 10px;
+	text-transform: uppercase;
+}
+.card ul li span {
+	padding: 5px 0;
+	font-size: 14px;
+}
+.card ul li span i{
+	font-size: 35px;
 }
 .card li span {
 	display: block;
