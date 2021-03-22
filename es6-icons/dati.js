@@ -97,12 +97,12 @@ $(document).ready(() => {
 			family: 'fas'
 		}
 	];
-
+	//Milestone 1
 	icons.forEach((elemento) => {
 		let template = $('.template li').clone();
 		let tag = `<i class="${elemento.family} ${elemento.prefix}${elemento.name}"></i>`;
 		template.children('span#icon').append(tag);
-		template.children('span#desc').text(elemento.nome);
+		template.children('span#desc').text(`${elemento.name}`);
 		$('#animals').append(template);
 	});
 });

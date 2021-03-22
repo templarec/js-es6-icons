@@ -27,4 +27,9 @@ main {
 	background-color: #fff;
 	border-radius: 20px;
 	box-shadow: 2px 2px 3px #000;
+	margin: 15px 15px;
+	padding-top: 30px;
+}
+.card li span {
+	display: block;
 }
